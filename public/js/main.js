@@ -20,7 +20,6 @@
 	/* Preloader 
 	 * -------------------------------------------------- */
 	var ssPreloader = function() {
-		$WIN.on('load', function() {	
 
 	      // will first fade out the loading animation 
 	    	$("#loader").fadeOut("slow", function(){
@@ -29,7 +28,6 @@
 	        $("#preloader").delay(300).fadeOut("slow");
 
 	      }); 
-	  	});
 	};  
 
 
@@ -190,7 +188,6 @@
 
 		var animateEl = $('.animate-this');
 
-		$WIN.on('load', function() {				
 			setTimeout(function() {
 				animateEl.each(function(ctr) {				
 						var el = $(this);
@@ -201,7 +198,6 @@
 
 				});
 			}, 200);				
-		});
 
 		$WIN.on('resize', function() {	
 			// remove animation classes	
@@ -214,8 +210,6 @@
   /* Flex Slider
 	* ------------------------------------------------------ */
 	var ssFlexSlider = function() {
-
-		$WIN.on('load', function() {
 
 		   $('#featured-post-slider').flexslider({
 				namespace: "flex-",
@@ -254,7 +248,6 @@
 				}
 		   });
 
-	   });
 	};	
 
 

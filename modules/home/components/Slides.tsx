@@ -1,5 +1,9 @@
 import React from 'react'
 
+import slide1 from '@/common/images/thumbs/featured/featured-1.jpg';
+import slide2 from '@/common/images/thumbs/featured/featured-2.jpg';
+import slide3 from '@/common/images/thumbs/featured/featured-3.jpg';
+
 const Slides = () => {
     return (
         <>
@@ -9,7 +13,7 @@ const Slides = () => {
                         <ul className="slides">
                             <li>
                                 <div className="featured-post-slide">
-                                    <div className="post-background" style={{ backgroundImage: "url('../common/images/thumbs/featured/featured-1.jpg')" }}></div>
+                                    <div className="post-background" style={{ backgroundImage: `url(${slide1.src})` }}></div>
                                     <div className="overlay"></div>
                                     <div className="post-content">
                                         <ul className="entry-meta">
@@ -22,7 +26,7 @@ const Slides = () => {
                             </li>
                             <li>
                                 <div className="featured-post-slide">
-                                    <div className="post-background" style={{ backgroundImage: "url('../common/images/thumbs/featured/featured-2.jpg')" }}></div>
+                                    <div className="post-background" style={{ backgroundImage: `url(${slide2.src})` }}></div>
                                     <div className="overlay"></div>
                                     <div className="post-content">
                                         <ul className="entry-meta">
@@ -35,7 +39,7 @@ const Slides = () => {
                             </li>
                             <li>
                                 <div className="featured-post-slide">
-                                    <div className="post-background" style={{ backgroundImage: "url('../common/images/thumbs/featured/featured-3.jpg')" }}></div>
+                                    <div className="post-background" style={{ backgroundImage: `url(${slide3.src})` }}></div>
                                     <div className="overlay"></div>
                                     <div className="post-content">
                                         <ul className="entry-meta">

@@ -1,12 +1,14 @@
 import React from 'react'
 
+import video from '@/common/images/thumbs/ottawa-bokeh.jpg'
+
 const FormatVideoArticle = () => {
     return (
         <>
             <article className="brick entry format-video animate-this">
                 <div className="entry-thumb video-image">
                     <a href="http://player.vimeo.com/video/14592941?title=0&amp;byline=0&amp;portrait=0&amp;color=F64B39" data-lity>
-                        <img src="images/thumbs/ottawa-bokeh.jpg" alt="bokeh" />
+                        <img src={video.src} alt="bokeh" />
                     </a>
                 </div>
                 <div className="entry-text">
