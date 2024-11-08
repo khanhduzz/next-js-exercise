@@ -14,18 +14,13 @@ type ArticleProps = {
     articleLinks: ArticleLink[];
 }
 
-const Article = ( article : ArticleProps) => {
+const Article = (article: ArticleProps) => {
     return (
         <>
             <article className="brick entry animate-this">
                 <div className="entry-thumb">
                     <a href="single-standard.html" className="thumb-link">
-                        <Image 
-                        src={article.imageUrl} 
-                        alt={article.imageName}
-                        width={500}
-                        height={500}
-                        />
+                        <img src={article.imageUrl} alt={article.imageName} />
                     </a>
                 </div>
                 <div className="entry-text">

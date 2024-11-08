@@ -10,6 +10,7 @@ import imageProp3 from '@/common/images/thumbs/diagonal-pattern.jpg';
 import imageProp4 from '@/common/images/thumbs/lighthouse.jpg';
 import imageProp5 from '@/common/images/thumbs/liberty.jpg';
 import FormatVideoArticle from "@/modules/home/components/FormatVideoArticle";
+import Script from "next/script";
 
 const articleProp1 = {
   name: "Photography Skills Can Improve Your Graphic Design",
