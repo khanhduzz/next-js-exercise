@@ -1,115 +1,109 @@
-import Image from "next/image";
-import localFont from "next/font/local";
+import { QuoteArticle, Slides, StandardArticle } from "@/modules/home/components";
+import AudioArticle from "@/modules/home/components/AudioArticle";
+import Article from "@/modules/home/components/Article";
+import GalleryArticle from "@/modules/home/components/GalleryArticle";
+import FormatLinkArticle from "@/modules/home/components/FormatLinkArticle";
 
-const geistSans = localFont({
-  src: "./fonts/GeistVF.woff",
-  variable: "--font-geist-sans",
-  weight: "100 900",
-});
-const geistMono = localFont({
-  src: "./fonts/GeistMonoVF.woff",
-  variable: "--font-geist-mono",
-  weight: "100 900",
-});
+import imageProp1 from '@/common/images/thumbs/shutterbug.jpg';
+import imageProp2 from '@/common/images/thumbs/usaf-rocket.jpg';
+import imageProp3 from '@/common/images/thumbs/diagonal-pattern.jpg';
+import imageProp4 from '@/common/images/thumbs/lighthouse.jpg';
+import imageProp5 from '@/common/images/thumbs/liberty.jpg';
+import FormatVideoArticle from "@/modules/home/components/FormatVideoArticle";
+
+const articleProp1 = {
+  name: "Photography Skills Can Improve Your Graphic Design",
+  description: "Lorem ipsum Sed eiusmod esse aliqua sed incididunt aliqua incididunt mollit id et sit proident dolor nulla sed commodo...",
+  imageUrl: imageProp1.src,
+  imageName: "Shutterbug",
+  articleLinks: [
+    { title: "Photography", link: '#' },
+    { title: "html", link: "#" }
+  ]
+}
+
+const articleProp2 = {
+  name: "The 10 Golden Rules of Clean Simple Design.",
+  description: "Lorem ipsum Sed eiusmod esse aliqua sed incididunt aliqua incididunt mollit id et sit proident dolor nulla sed commodo...",
+  imageUrl: imageProp2.src,
+  imageName: "USAF rocket",
+  articleLinks: [
+    { title: "Branding", link: '#' },
+    { title: "Mockup", link: "#" }
+  ]
+}
+
+const articleProp3 = {
+  name: "You Can See Patterns Everywhere.",
+  description: "Lorem ipsum Sed eiusmod esse aliqua sed incididunt aliqua incididunt mollit id et sit proident dolor nulla sed commodo...",
+  imageUrl: imageProp3.src,
+  imageName: "Pattern",
+  articleLinks: [
+    { title: "Design", link: '#' },
+    { title: "UI", link: "#" }
+  ]
+}
+
+const articleProp4 = {
+  name: "Breathtaking Photos of Lighthouses.",
+  description: "Lorem ipsum Sed eiusmod esse aliqua sed incididunt aliqua incididunt mollit id et sit proident dolor nulla sed commodo...",
+  imageUrl: imageProp4.src,
+  imageName: "Lighthouse",
+  articleLinks: [
+    { title: "Photography", link: '#' },
+    { title: "Design", link: "#" }
+  ]
+}
+
+const articleProp5 = {
+  name: "Designing With Black and White.",
+  description: "Lorem ipsum Sed eiusmod esse aliqua sed incididunt aliqua incididunt mollit id et sit proident dolor nulla sed commodo...",
+  imageUrl: imageProp5.src,
+  imageName: "Liberty",
+  articleLinks: [
+    { title: "Branding", link: '#' },
+    { title: "html", link: "#" }
+  ]
+}
 
 export default function Home() {
   return (
-    <div
-      className={`${geistSans.variable} ${geistMono.variable} grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]`}
-    >
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              pages/index.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+    <>
+      <section id="bricks">
+        <div className="row masonry">
+          <div className="bricks-wrapper">
+            <div className="grid-sizer"></div>
+            <Slides />
+            <StandardArticle />
+            <AudioArticle />
+            <QuoteArticle />
+            <Article {...articleProp1}/>
+            <Article {...articleProp2}/>
+            <GalleryArticle />
+            <FormatLinkArticle />
+            <Article {...articleProp3}/>
+            <FormatVideoArticle />
+            <Article {...articleProp4}/>
+            <Article {...articleProp5}/>
+          </div>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+
+        <div className="row">
+          <nav className="pagination">
+            <span className="page-numbers prev inactive">Prev</span>
+            <span className="page-numbers current">1</span>
+            <a href="#" className="page-numbers">2</a>
+            <a href="#" className="page-numbers">3</a>
+            <a href="#" className="page-numbers">4</a>
+            <a href="#" className="page-numbers">5</a>
+            <a href="#" className="page-numbers">6</a>
+            <a href="#" className="page-numbers">7</a>
+            <a href="#" className="page-numbers">8</a>
+            <a href="#" className="page-numbers">9</a>
+            <a href="#" className="page-numbers next">Next</a>
+          </nav>
+        </div>
+      </section>
+    </>
   );
 }
